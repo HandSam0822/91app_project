@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  background: rgb(245, 214, 214);
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.topnav {
+  overflow: hidden;
+  height: 5rem;
+  background-color: rgb(237, 181, 181);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.right-part {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+#id_nav_profile {
+  font-size: 15px;
+  color: white;
+}
+
+.right-part a {
+  background-color: pink;
+  color: black;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.right-part a:hover {
+  background-color: pink;
+  color: white;
+}
+

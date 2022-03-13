@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <link rel="stylesheet" href="css/calculator.css">
+        <title>calculator</title>
+        <script src="js/calculator.js"></script>
+    </head>
+    <body>
+        <div class="container">                        
+            <div class="button-container">                                                
+                <div id="output">0</div>
+                <div class="sub-button-container">
+                    <button class="digit-button" id="key-7" onclick="onClickDigit(7)">7</button>
+                    <button class="digit-button" id="key-8" onclick="onClickDigit(8)">8</button>
+                    <button class="digit-button" id="key-9" onclick="onClickDigit(9)">9</button>
+                    <button class="operator-button" id="key-plus" onclick="onClickOperation('+')">&plus;</button>
+                </div>
+
+                <div class="sub-button-container">
+                    <button class="digit-button" id="key-4" onclick="onClickDigit(4)">4</button>
+                    <button class="digit-button" id="key-5" onclick="onClickDigit(5)">5</button>
+                    <button class="digit-button" id="key-6" onclick="onClickDigit(6)">6</button>
+                    <button class="operator-button" id="key-minus" onclick="onClickOperation('-')">&minus;</button>
+                </div>
+
+                <div class="sub-button-container">
+                    <button class="digit-button" id="key-1" onclick="onClickDigit(1)">1</button>
+                    <button class="digit-button" id="key-2" onclick="onClickDigit(2)">2</button>
+                    <button class="digit-button" id="key-3" onclick="onClickDigit(3)">3</button>
+                    <button class="operator-button" id="key-times" onclick="onClickOperation('*')">&times;</button>
+                </div>
+
+                <div class="sub-button-container">
+                    <button class="invisible-button">ii</button>
+                    <button class="digit-button" id="key-0" onclick="onClickDigit(0)">0</button>
+                    <button class="operator-button" id="key-push" onclick="onClickOperation('put')">&uarr;</button>
+                    <button class="operator-button" id="key-divide" onclick="onClickOperation('/')">&divide;</button>
+                </div>  
+            </div>
+        </div>            
+    </body>
+</html>

@@ -1,0 +1,79 @@
+.digit-button {
+    font-size:30px;
+    background-color: #4CAF50; /* Green */
+    border-radius: 80%;
+    width: 40px;
+    height: 40px;
+}
+.operator-button {
+    font-size:30px;
+    background-color: #f44336; /* Red */
+    border-radius: 90%;
+    width: 40px;
+    height: 40px;
+
+}
+
+#output {
+    background-color: #008CBA; /* Blue */
+    width: 200px;
+    height: 40px;
+    margin: 20px auto 20px;
+    text-align: right;
+}
+
+.digit-button:hover {
+    background-color: #FFFFFF; /* White */    
+}
+/* 
+#key-plus {
+    background-color: #FFFFFF; 
+}
+
+#key-minus {
+    background-color: #FFFFFF; 
+}
+
+#key-times {
+    background-color: #FFFFFF; 
+}
+
+#key-divide {
+    background-color: #FFFFFF; 
+}
+
+#key-push {
+    background-color: #FFFFFF; 
+} */
+
+.operator-button:hover {
+    background-color: #FFFFFF; /* White */
+}
+
+.container {
+    background-color: black;    
+    width:800px; 
+    height: 300px;
+    margin:100px auto;
+}
+
+.button-container {
+    margin: 100px auto;
+    background-color: yellow; 
+    width: 80%;
+    height: 80%;        
+}
+.sub-button-container {        
+    width: 200px;
+    height: 40px;
+    margin: 10px auto;
+}
+
+.invisible-button {
+    visibility: hidden;
+    font-size:30px;
+    background-color: #4CAF50; /* Green */
+    border-radius: 80%;
+    width: 40px;
+    height: 40px;
+}

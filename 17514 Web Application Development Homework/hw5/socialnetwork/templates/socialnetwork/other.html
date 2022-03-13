@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/profile.css" />
+  </head>
+  <body>
+    {% include './nav.html' %}     
+
+    <div class="back">
+      <h1 id="id_page_name">{{profile.user.first_name}} {{profile.user.last_name}}Profile</h1>
+      {% load static %}
+      {% if not profile.picture %}
+        <img id="id_user_picture" src="{% static 'socialnetwork/default.jpeg' %}" />
+      {% else %}
+        <img src= "{% url 'photo' profile.user.id %}"  id="id_user_picture" />
+      {% endif %}
+      <div id="id_user_bio">{{profile.bio}}</div>
+      <br>
+
+      <form action="{% url 'other' profile.user.id %}" method="POST"> 
+        {% if profile.user not in user.profile.following.all %}
+          <button id="id_follow" name="follow" type="submit">Follow</button>                                   
+        {% else %}
+          <button id="id_unfollow" name="unfollow" type="submit">Unfollow</button>        
+        {% endif %}
+        {% csrf_token %}
+      </form>
+    
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/profile.css" />
+  </head>
+  <body>
+    {% include './nav.html' %}
+    <div class="back">
+      <h1 id="id_page_name">Profile Page for {{user.first_name}} {{user.last_name}}</h1>
+      <img
+        src="/static/socialnetwork/profile_pic.jpeg"
+        alt=""
+        width="300"
+        id="id_user_picture"
+      />
+
+      <div class="bio" id="id_post_div_n">
+        <textarea id="id_bio_input_text">
+          Sam loves playing poker and running.
+        </textarea> 
+      </div>
+      
+      <form class="upload">
+        <label>Profile Picture:</label>
+          <input id="id_profile_picture" type="button" value="Choose File" >
+          No file chosen<br>
+          <input type="submit" id="id_update_profile_button">
+
+              <div>
+        <p>You are following:</p>
+        <a href="{% url 'LBJ'%}" id="id_profile_link_x">LBJ</a>
+      </div>
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/global.css" />
+  </head>
+  <body>
+    {% include './nav.html' %}   
+    {% block content %}
+    <div class="back">
+      <h1 id="id_page_name">Global Stream</h1>
+      <div>
+        <form action="">
+          <label>New Post:</label>
+          <input type="text" name="" id="id_post_input_text" />
+          <input type="submit" value="post" id="id_post_button" />
+        </form>
+      </div>
+
+      <div class="post" id="id_post_div_n">
+        <p>          
+          <a id="id_post_profile_n" style="None" href="LBJ">Post by LBJ</a>
+          <span id="id_post_text_n">Laker Nation</span>
+        </p>
+        <p id="id_post_date_time_n">2/16/2022 12:10 PM</p>
+      </div>
+
+      <div id="id_comment_div_k">    
+        <span id="id_comment_profile_k">D.Wade </span>
+        <span id="id_comment_text_k">Looks good to me</span>
+        <span id="id_comment_date_time_k">2/16/2022 12:40 PM</span>
+        <!-- <p id="id_comment_date_time_k"></p> -->
+      </div>
+
+      <div>
+        <form action="">
+          <label>Comment:</label>
+          <input type="text" name="" id="id_comment_input_text_n" />
+          <input type="submit" id="id_comment_button_n" />
+        </form>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+  
+
+</html>

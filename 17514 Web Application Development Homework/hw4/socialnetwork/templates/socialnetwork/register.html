@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/login.css" />
+  </head>
+  <body>
+    <div class="topnav" id="id_header_div">
+      <a href="#home" id="id_site_name">Blog Master</a>
+      <div class="right-part">
+        <form action="/socialnetwork/login/">
+          <button id="id_login_link" >Login</button>          
+        </form>      
+      </div>
+    </div>
+
+    <div class="login">
+      {% block content %}
+      <h1 id="id_page_name">Register</h1>
+      <form method="post" action="{% url 'register' %}">
+        <table>
+          {% for field in form.visible_fields %}
+            <tr>
+              <td>
+                <td>{{field.label_tag}}</td>
+                <td>{{field}}</td>
+                <td class="error">
+                  {% for error in field.errors %} {{error}}{%endfor%}                  
+                </td>
+              </td>
+            </tr>
+            {%endfor%}
+        </table>
+        <input type="submit" value="Submit" id="id_register_button" />
+        <!-- <button id="id_register_button">Register</button> -->
+        {% csrf_token %}
+      </form>
+      {% for error in form.non_field_errors %}
+        <p class="errorlist">
+          {{ error }}
+        </p>
+        {% endfor %}
+        {% endblock %}
+    </div>
+  </body>
+</html>

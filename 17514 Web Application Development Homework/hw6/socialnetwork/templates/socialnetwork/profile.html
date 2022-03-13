@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/profile.css" />
+  </head>
+  <body>
+    {% include './nav.html' %}
+
+    <div class="back">
+      <h1 id="id_page_name">{{user.first_name}} {{user.last_name}} Profile</h1>
+      {% if not profile.picture %}         
+      {% load static %}
+        <img src= "{% static 'socialnetwork/default.jpeg' %}" id="id_user_picture" />
+      {% else %}              
+        <img src= "{% url 'photo' profile.user.id %}" id="id_user_picture" />
+      {% endif %}
+
+      <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
+        <table class="upload"> 
+          {{form}}
+        </table>          
+        
+        <input id="id_update_profile_button" type="submit" value="update">
+        <p>You are following:</p>
+        <ul>
+        {% for u in profile.following.all %}
+          <li>
+            <a href="{% url 'other' u.id %}" 
+            id="id_profile_link_{{u}}">{{u.first_name}} {{u.last_name}}</a>
+          </li>
+          {% endfor %}
+        </ul>        
+        {% csrf_token %}
+      </form>
+      
+    </div>
+  </body>
+</html>

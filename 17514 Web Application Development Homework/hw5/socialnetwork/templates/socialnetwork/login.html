@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Blog Master</title>
+    <link rel="stylesheet" href="/static/socialnetwork/login.css" />
+  </head>
+  <body>
+    <div class="topnav" id="id_header_div">
+      <a href="#home" id="id_site_name">Blog Master</a>
+      <div class="right-part">
+        <form action="/socialnetwork/register/">
+          <button id="id_register_link" >Register</button>          
+        </form>      
+      </div>
+    </div>
+    {% block content %}
+    <div class="login">
+      <h1 id="id_page_name">Login</h1>      
+      <form method="post" action="{% url 'login' %}">
+        <table>
+            {{form}}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Submit" id="id_login_button" />        
+      </form>      
+    </div>
+
+    {% for error in form.non_field_errors %}
+        <p class="errorlist">{{ error }}</p>
+        {% endfor %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head >        
+        <link rel="stylesheet" href="/static/calculator/calculator.css">
+        <title>calculator</title>        
+    </head>
+    <body>
+        <div class="container">                        
+            <div class="button-container">                                                
+                <div style="background-color:{{bg_color}};" id="output">{{out}}</div>
+                <form method="POST" action="/">    
+                    <div class="sub-button-container">
+                        <button class="digit-button" id="key-7" name="button" value="7">7</button>
+                        <button class="digit-button" id="key-8" name="button" value="8">8</button>
+                        <button class="digit-button" id="key-9" name="button" value="9">9</button>
+                        <button class="operator-button" id="key-plus" name="button" value="plus">&plus;</button>
+                    </div>
+    
+                    <div class="sub-button-container">
+                        <button class="digit-button" id="key-4" name="button" value="4">4</button>
+                        <button class="digit-button" id="key-5" name="button" value="5">5</button>
+                        <button class="digit-button" id="key-6" name="button" value="6">6</button>
+                        <button class="operator-button" id="key-minus" name="button" value="minus">&minus;</button>
+                    </div>
+    
+                    <div class="sub-button-container">
+                        <button class="digit-button" id="key-1" name="button" value="1">1</button>
+                        <button class="digit-button" id="key-2" name="button" value="2">2</button>
+                        <button class="digit-button" id="key-3" name="button" value="3">3</button>
+                        <button class="operator-button" id="key-times" name="button" value="times">&times;</button>
+                    </div>
+    
+                    <div class="sub-button-container">
+                        <button class="invisible-button">ii</button>
+                        <button class="digit-button" id="key-0" name="button" value="0">0</button>
+                        <button class="operator-button" id="key-push" name="button" value="push">&uarr;</button>
+                        <button class="operator-button" id="key-divide" name="button" value="divide">&divide;</button>
+                    </div>                              
+                    <input type="hidden" name="hi" value="{{hi}}">
+                    <input type="hidden" name="mid" value="{{mid}}">   
+                    <input type="hidden" name="lo" value="{{lo}}">
+                    <input type="hidden" name="entering" value="{{entering}}">
+                    <input type="hidden" name="cnt" value="{{cnt}}">
+                    {% csrf_token %}
+                </form>                
+            </div>
+        </div>            
+    </body>
+</html>
